@@ -69,7 +69,7 @@ void debug_task(const Event* e, void* data) {															// key: d
 }
 
 int main(int argc, char* argv[])   																																										// to run with console window
-//int WinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance,	_In_ LPSTR lpCmdLine, _In_ int nShowCmd) {	// to run without console window
+//int WinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance,	_In_ LPSTR lpCmdLine, _In_ int nShowCmd)  	// to run without console window
 {
 	framework.open_framework();
 
@@ -91,7 +91,7 @@ int main(int argc, char* argv[])   																																										// 
 	// define some keys
 	framework.define_key("q", "quit", &quit_app, nullptr);
 	framework.define_key("d", "run debug tasks", &debug_task, nullptr);
-
+	 
 
 
 	framework.main_loop();
