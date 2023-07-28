@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32825.248
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "kw", "kw\kw.vcxproj", "{AC3F26B2-8596-427F-8CDB-DD1707C09B9B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		r_dll|x64 = r_dll|x64
+		r_dll|x86 = r_dll|x86
+		r_static|x64 = r_static|x64
+		r_static|x86 = r_static|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AC3F26B2-8596-427F-8CDB-DD1707C09B9B}.Debug|x64.ActiveCfg = Debug|x64
+		{AC3F26B2-8596-427F-8CDB-DD1707C09B9B}.Debug|x64.Build.0 = Debug|x64
+		{AC3F26B2-8596-427F-8CDB-DD1707C09B9B}.Debug|x86.ActiveCfg = Debug|Win32
+		{AC3F26B2-8596-427F-8CDB-DD1707C09B9B}.Debug|x86.Build.0 = Debug|Win32
+		{AC3F26B2-8596-427F-8CDB-DD1707C09B9B}.r_dll|x64.ActiveCfg = Release_dll|x64
+		{AC3F26B2-8596-427F-8CDB-DD1707C09B9B}.r_dll|x64.Build.0 = Release_dll|x64
+		{AC3F26B2-8596-427F-8CDB-DD1707C09B9B}.r_dll|x86.ActiveCfg = Release_dll|Win32
+		{AC3F26B2-8596-427F-8CDB-DD1707C09B9B}.r_dll|x86.Build.0 = Release_dll|Win32
+		{AC3F26B2-8596-427F-8CDB-DD1707C09B9B}.r_static|x64.ActiveCfg = Release|x64
+		{AC3F26B2-8596-427F-8CDB-DD1707C09B9B}.r_static|x64.Build.0 = Release|x64
+		{AC3F26B2-8596-427F-8CDB-DD1707C09B9B}.r_static|x86.ActiveCfg = Release|Win32
+		{AC3F26B2-8596-427F-8CDB-DD1707C09B9B}.r_static|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7762B348-659E-4599-9BD6-DD8BBE4C1BD1}
+	EndGlobalSection
+EndGlobal
