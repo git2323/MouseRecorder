@@ -61,7 +61,7 @@ notify-level-event warning
 #notify-level-nativenet spam		# no data so far
 #notify-level-loader debug
 #notify-level-display debug
-
+#notify-level-dgraph spam
 
 # These specify where model files may be loaded from.  You probably
 # want to set this to a sensible path for yourself.  $THIS_PRC_DIR is
