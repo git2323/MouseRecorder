@@ -37,6 +37,8 @@
 #include <orthographicLens.h>
 #include <cullFaceAttrib.h>
 #include <stencilAttrib.h>
+#include <recorderController.h>
+#include <mouseRecorder.h>
 
 PandaFramework framework;
 PT(WindowFramework) window;
@@ -68,6 +70,41 @@ void debug_task(const Event* e, void* data) {															// key: d
   prdbg("debug task done");
 }
 
+// create the RecorderController
+PT(RecorderController) rec_ctrl = new RecorderController;
+
+void record_task(const Event* e, void* data) {															// key: r
+	// add the MouseRecorders
+	MouseRecorder* mouse_and_kb_recorder = new MouseRecorder("mouse_and_kb_recorder");
+	rec_ctrl->add_recorder("mouse_and_kb_recorder", mouse_and_kb_recorder);
+	MouseRecorder* mouse_and_kb_recorder2 = new MouseRecorder("mouse_and_kb_recorder2");
+	rec_ctrl->add_recorder("mouse_and_kb_recorder2", mouse_and_kb_recorder);
+
+	// begin recording
+	rec_ctrl->begin_record("rec.bam");
+
+	// create some frames
+	//framework.do_frame(Thread::get_current_thread());
+	rec_ctrl->record_frame();
+	//framework.do_frame(Thread::get_current_thread());
+	rec_ctrl->record_frame();
+	//framework.do_frame(Thread::get_current_thread());
+	rec_ctrl->record_frame();
+
+	// end recording
+	rec_ctrl->close();
+}
+
+void replay_task(const Event* e, void* data) {															// key: p
+	// begin playback
+	rec_ctrl->begin_playback("rec.bam");
+
+	// replay frames
+	rec_ctrl->play_frame();
+	rec_ctrl->play_frame();
+	rec_ctrl->play_frame();
+}
+
 int main(int argc, char* argv[])   																																										// to run with console window
 //int WinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance,	_In_ LPSTR lpCmdLine, _In_ int nShowCmd)  	// to run without console window
 {
@@ -91,7 +128,11 @@ int main(int argc, char* argv[])   																																										// 
 	// define some keys
 	framework.define_key("q", "quit", &quit_app, nullptr);
 	framework.define_key("d", "run debug tasks", &debug_task, nullptr);
-	 
+	framework.define_key("r", "run debug tasks", &record_task, nullptr);  // r
+	framework.define_key("p", "run debug tasks", &replay_task, nullptr);  // p
+	
+
+
 
 
 	framework.main_loop();

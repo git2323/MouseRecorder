@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "kw", "kw\kw.vcxproj", "{AC3
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		builtx_64|x64 = builtx_64|x64
+		builtx_64|x86 = builtx_64|x86
 		Debug|x64 = Debug|x64
 		Debug|x86 = Debug|x86
 		r_dll|x64 = r_dll|x64
@@ -15,6 +17,10 @@ Global
 		r_static|x86 = r_static|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AC3F26B2-8596-427F-8CDB-DD1707C09B9B}.builtx_64|x64.ActiveCfg = builtx_64|x64
+		{AC3F26B2-8596-427F-8CDB-DD1707C09B9B}.builtx_64|x64.Build.0 = builtx_64|x64
+		{AC3F26B2-8596-427F-8CDB-DD1707C09B9B}.builtx_64|x86.ActiveCfg = builtx_64|Win32
+		{AC3F26B2-8596-427F-8CDB-DD1707C09B9B}.builtx_64|x86.Build.0 = builtx_64|Win32
 		{AC3F26B2-8596-427F-8CDB-DD1707C09B9B}.Debug|x64.ActiveCfg = Debug|x64
 		{AC3F26B2-8596-427F-8CDB-DD1707C09B9B}.Debug|x64.Build.0 = Debug|x64
 		{AC3F26B2-8596-427F-8CDB-DD1707C09B9B}.Debug|x86.ActiveCfg = Debug|Win32
